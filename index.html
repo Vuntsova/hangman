@@ -1,0 +1,43 @@
+<html>
+<head>
+<meta charset="utf-8">
+
+	<title>Hangman</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="icon" href="fav.ico"  sizes="16x16">
+	<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond|Ruthie" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Codystar|Faster+One|Geo|Iceberg|Monofett|Monoton|Sarpanch" rel="stylesheet">	
+
+	
+
+</head>
+<body>
+<!--HEADER===============================-->
+
+	<div id="container">
+		<div id="row">
+			<div id="col-xs-12">
+	  			<p><a>#HANGMAN#LAMBORGINI#PLAY</a></p>
+	  		</div>
+	  	</div>
+	</div>
+<!--GAME SECTION ==========================-->	
+	<div class="container border">
+	    	<div class="jumbotron">
+	    		<h3>GUESS THE MODEL:</h3>
+					<h3 id="wordToGuess">_ _ _ _ _ _ _ _ _ _ </h3>
+				<h3>WRONG GUESSES:&nbsp<span id="wrongGuesses"></span>
+				<br><br>
+				<div id="row">
+					<div class="col-md-4"><h3>GUESSES LEFT:&nbsp<span id="numGuesses">  9</span></h3></div>
+					<div class="col-md-4"><h3>WIN COUNTER:&nbsp<span id="winCounter">  0</span></h3></div>
+					<div class="col-md-4"><h3>LOSS COUNTER:&nbsp<span id="lossCounter">  0</span></h3></div>
+				</div>
+			</div>
+	   </div>
+
+<embed src="audio.mp3" autostart="true" width="0" height="0">
+<script src="javascript.js"></script>
+</body>
+</html>
