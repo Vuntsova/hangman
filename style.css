@@ -1,5 +1,8 @@
 body{
 	background: url("bg.jpg") no-repeat center center fixed;
+  display: block;
+  max-width: 100%;
+  height: auto;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -55,7 +58,54 @@ p:nth-child(1) a {
   }
 }
 
+@media (max-width: 480px) {
 
+
+  
+p {
+  text-align: center;
+  font-size: 1.8em;
+  text-decoration: none;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.2s;
+  transition: all 0.2s;
+  color: #15e6ee;
+
+}
+
+.jumbotron {
+    padding-top: 240px;
+    padding-bottom: 0;
+  }
+  .container .jumbotron,
+  .container-fluid .jumbotron {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+
+  .jumbotron h1,
+  .jumbotron .h1 {
+    font-size: 53px;
+  }
+
+  .name{
+  padding-top: 600px;
+  }
+
+body{
+line-height: 6.428571;
+background: url("bg1.jpg") no-repeat center center fixed;
+  display: block;
+  max-width: 100%;
+  height: auto;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: 5%;"
+}
+
+}
 
 
 

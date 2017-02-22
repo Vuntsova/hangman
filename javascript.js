@@ -6,7 +6,7 @@ var selectWord = "";
 var lettersinWord = [];
 var numBlanks= 0;
 var blanksAndSuccesses = [];
-var wrongGuesses = [" "];
+var wrongGuesses = [];
 
 //Game counters
 var winCount = 0;
@@ -23,7 +23,7 @@ function startGame() {
 
 	//reset
 	guessesLeft = 9;
-	wrongGuesses = [" "];
+	wrongGuesses = [];
 	blanksAndSuccesses = [];
 
 
@@ -34,9 +34,9 @@ function startGame() {
 
 	//change HTML to reflect round conditions
 	document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");
-	document.getElementById("numGuesses") .innerHTML = guessesLeft;
-	document.getElementById("winCounter") .innerHTML = winCount;
-	document.getElementById("lossCounter") .innerHTML = lossCount;
+	document.getElementById("numGuesses").innerHTML = guessesLeft;
+	document.getElementById("winCounter").innerHTML = winCount;
+	document.getElementById("lossCounter").innerHTML = lossCount;
 	//test
 	console.log(selectWord);
 	console.log(lettersinWord);
