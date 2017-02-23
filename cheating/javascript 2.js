@@ -1,12 +1,20 @@
-// GLOBAL VAL
-// -----------------
+// GLOBAL VARIABLES (Accessible by all functions)
+// ==================================================================================================
+// Array of Word Options (all lowercase).
 alert('Play Game in Full Screen with Audio On');
 var wordOptions= ["centenario", "aventador", "egoista", "gallardo", "diablo", "islero", "miura", "countach"];
+// Computer selected solution will be held here.
 var selectWord = "";
+// This will break the solution into individual letters to be stored in array.
 var lettersinWord = [];
+// This will be the number of blanks we show based on the solution. (_ _ _ _ _ _ _ _)
 var numBlanks= 0;
+// Holds a mix of blank and solved letters (ex: 'n, _ _, n, _').
 var blanksAndSuccesses = [];
+// Holds all of the wrong guesses.
 var wrongGuesses = [];
+// Holds the letters guessed
+var lettersGuessed = "";
 
 //Game counters
 var winCount = 0;
@@ -15,6 +23,8 @@ var guessesLeft = 9;
 
 // FUNCTIONS
 // ==================
+// startGame()
+// It's how we we will start and restart the game.
 function startGame() {
 	selectWord = wordOptions[Math.floor(Math.random()* wordOptions.length)];
 	lettersinWord=selectWord.split("");
@@ -29,7 +39,7 @@ function startGame() {
 
 	//populate blanks and successes 
 	for (var i=0; i<numBlanks; i++){
-		blanksAndSuccesses.push("_")	
+		blanksAndSuccesses.push("_ ")	
 	};
 
 	//change HTML to reflect round conditions
@@ -71,9 +81,9 @@ function roundComplete(){
 	document.getElementById("wrongGuesses").innerHTML = wrongGuesses.join(" ");
 	if (lettersinWord.toString() == blanksAndSuccesses.toString()){
 		winCount++;
-		setTimeout('alert("you won")', 100);
+		alert("you won");
 		document.getElementById("winCounter").innerHTML = winCount;
-		setTimeout('startGame()', 1000);
+		startGame();
 	}
 	else if (guessesLeft==0){
 		lossCount++;
@@ -99,3 +109,16 @@ document.onkeyup= function(event){
 	checkLetters(letterGuessed);
 	roundComplete();
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
