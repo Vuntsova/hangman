@@ -1,8 +1,18 @@
+$(document).ready (function(){
 // GLOBAL VARIABLES (Accessible by all functions)
 // ==================================================================================================
 // Array of Word Options (all lowercase).
 alert('Play Game in Full Screen with Audio On');
-var wordOptions= ["centenario", "aventador", "egoista", "gallardo", "diablo", "islero", "miura", "countach"];
+var wordOptions= [
+"centenario",
+"aventador", 
+"egoista", 
+"gallardo", 
+"diablo", 
+"islero", 
+"miura", 
+"countach"
+];
 // Computer selected solution will be held here.
 var selectWord = "";
 // This will break the solution into individual letters to be stored in array.
@@ -39,7 +49,7 @@ function startGame() {
 
 	//populate blanks and successes 
 	for (var i=0; i<numBlanks; i++){
-		blanksAndSuccesses.push("_ ")	
+		blanksAndSuccesses.push("_")	
 	};
 
 	//change HTML to reflect round conditions
@@ -53,6 +63,7 @@ function startGame() {
 	console.log(numBlanks);
 	console.log(blanksAndSuccesses);
 };
+
 function checkLetters(letter){
 	var isLetterInWord = false;
 	for ( var i=0;i<numBlanks; i++){
@@ -68,10 +79,20 @@ function checkLetters(letter){
 	}
 }
 		else{
+			var alreadyUsed = false;
+			for (var index=0; index < wrongGuesses.length; index++) {
+			     if (wrongGuesses[index] === letter) {
+				      alreadyUsed = true;
+				      index = wrongGuesses.length; // get out of this loop
+			     }  // end of if
+		    };
+		      // end of for
 			wrongGuesses.push(letter);
 			guessesLeft--
 		}
 		console.log(blanksAndSuccesses);
+
+
 };
 
 function roundComplete(){
@@ -110,7 +131,7 @@ document.onkeyup= function(event){
 	roundComplete();
 };
 
-
+});	
 
 
 

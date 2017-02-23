@@ -58,10 +58,20 @@ function checkLetters(letter){
 	}
 }
 		else{
+			var alreadyUsed = false;
+			for (var index=0; index < wrongGuesses.length; index++) {
+			     if (wrongGuesses[index] === letter) {
+				      alreadyUsed = true;
+				      index = wrongGuesses.length; // get out of this loop
+			     }  // end of if
+		    };
+		      // end of for
 			wrongGuesses.push(letter);
 			guessesLeft--
 		}
 		console.log(blanksAndSuccesses);
+
+
 };
 
 function roundComplete(){
